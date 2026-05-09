@@ -1,4 +1,6 @@
 import AppKit
+import SwiftUI
+import SkyLightWindow
 
 final class AppDelegate: NSObject, NSApplicationDelegate {
     private var windowControllers: [NSWindowController] = []
@@ -84,8 +86,13 @@ final class AppWindow: NSWindow {
 
 final class AppWindowController: NSWindowController {
     init(screen: NSScreen) {
+        let appView = AppView()
+        let appController = AppController(view: appView)
+
         super.init(window: AppWindow(screen: screen))
-        contentViewController = AppController()
+        contentViewController = appController
+
+        SkyLightOperator.shared.delegateView(AnyView(AppViewContainer(appView: AppView())), toScreen: screen)
     }
 
     @available(*, unavailable)
@@ -94,8 +101,21 @@ final class AppWindowController: NSWindowController {
     }
 }
 
+struct AppViewContainer: NSViewRepresentable {
+    let appView: AppView
+
+    func makeNSView(context: Context) -> AppView {
+        appView
+    }
+
+    func updateNSView(_ nsView: AppView, context: Context) {}
+}
+
 final class AppController: NSViewController {
-    init() {
+    private let appView: AppView
+
+    init(view: AppView) {
+        self.appView = view
         super.init(nibName: nil, bundle: nil)
     }
 
@@ -105,7 +125,7 @@ final class AppController: NSViewController {
     }
 
     override func loadView() {
-        view = AppView()
+        view = appView
     }
 }
 

@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		F58BB86E2FAF8166005A1B52 /* SkyLightWindow in Frameworks */ = {isa = PBXBuildFile; productRef = F58BB86D2FAF8166005A1B52 /* SkyLightWindow */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		F58BB8592FAF774B005A1B52 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -35,16 +39,6 @@
 			path = ActivateSwift;
 			sourceTree = "<group>";
 		};
-		F58BB83D2FAF7014005A1B52 /* ActivateSwiftTests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = ActivateSwiftTests;
-			sourceTree = "<group>";
-		};
-		F58BB8472FAF7014005A1B52 /* ActivateSwiftUITests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = ActivateSwiftUITests;
-			sourceTree = "<group>";
-		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F58BB86E2FAF8166005A1B52 /* SkyLightWindow in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,8 +71,6 @@
 			isa = PBXGroup;
 			children = (
 				F58BB82F2FAF7013005A1B52 /* ActivateSwift */,
-				F58BB83D2FAF7014005A1B52 /* ActivateSwiftTests */,
-				F58BB8472FAF7014005A1B52 /* ActivateSwiftUITests */,
 				F58BB82E2FAF7013005A1B52 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -112,6 +105,7 @@
 			);
 			name = ActivateSwift;
 			packageProductDependencies = (
+				F58BB86D2FAF8166005A1B52 /* SkyLightWindow */,
 			);
 			productName = ActivateSwift;
 			productReference = F58BB82D2FAF7013005A1B52 /* ActivateSwift.app */;
@@ -129,9 +123,6 @@
 			);
 			dependencies = (
 				F58BB83C2FAF7014005A1B52 /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				F58BB83D2FAF7014005A1B52 /* ActivateSwiftTests */,
 			);
 			name = ActivateSwiftTests;
 			packageProductDependencies = (
@@ -152,9 +143,6 @@
 			);
 			dependencies = (
 				F58BB8462FAF7014005A1B52 /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				F58BB8472FAF7014005A1B52 /* ActivateSwiftUITests */,
 			);
 			name = ActivateSwiftUITests;
 			packageProductDependencies = (
@@ -202,6 +190,9 @@
 			);
 			mainGroup = F58BB8242FAF7013005A1B52;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				F58BB86C2FAF8166005A1B52 /* XCRemoteSwiftPackageReference "SkyLightWindow" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = F58BB82E2FAF7013005A1B52 /* Products */;
 			projectDirPath = "";
@@ -411,6 +402,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 11.5;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = jp.3kn.ActivateSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -441,6 +433,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 11.5;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = jp.3kn.ActivateSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -570,6 +563,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F58BB86C2FAF8166005A1B52 /* XCRemoteSwiftPackageReference "SkyLightWindow" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Lakr233/SkyLightWindow";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F58BB86D2FAF8166005A1B52 /* SkyLightWindow */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F58BB86C2FAF8166005A1B52 /* XCRemoteSwiftPackageReference "SkyLightWindow" */;
+			productName = SkyLightWindow;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F58BB8252FAF7013005A1B52 /* Project object */;
 }
