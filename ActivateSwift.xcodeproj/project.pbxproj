@@ -7,14 +7,14 @@
 	objects = {
 
 /* Begin PBXContainerItemProxy section */
-		F58BB83B2FAF7014005A1B52 /* PBXContainerItemProxy */ = {
+		F58BB8592FAF774B005A1B52 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = F58BB8252FAF7013005A1B52 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = F58BB82C2FAF7013005A1B52;
 			remoteInfo = ActivateSwift;
 		};
-		F58BB8452FAF7014005A1B52 /* PBXContainerItemProxy */ = {
+		F58BB85A2FAF774B005A1B52 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = F58BB8252FAF7013005A1B52 /* Project object */;
 			proxyType = 1;
@@ -192,6 +192,13 @@
 			knownRegions = (
 				en,
 				Base,
+				pl,
+				ru,
+				"zh-Hans",
+				ja,
+				tr,
+				de,
+				"zh-Hant",
 			);
 			mainGroup = F58BB8242FAF7013005A1B52;
 			minimizedProjectReferenceProxies = 1;
@@ -259,12 +266,12 @@
 		F58BB83C2FAF7014005A1B52 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = F58BB82C2FAF7013005A1B52 /* ActivateSwift */;
-			targetProxy = F58BB83B2FAF7014005A1B52 /* PBXContainerItemProxy */;
+			targetProxy = F58BB8592FAF774B005A1B52 /* PBXContainerItemProxy */;
 		};
 		F58BB8462FAF7014005A1B52 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = F58BB82C2FAF7013005A1B52 /* ActivateSwift */;
-			targetProxy = F58BB8452FAF7014005A1B52 /* PBXContainerItemProxy */;
+			targetProxy = F58BB85A2FAF774B005A1B52 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -322,7 +329,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
-				MACOSX_DEPLOYMENT_TARGET = 26.4;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -379,7 +386,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
-				MACOSX_DEPLOYMENT_TARGET = 26.4;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
@@ -454,7 +461,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 26.4;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = jp.3kn.ActivateSwiftTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -474,7 +481,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 26.4;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = jp.3kn.ActivateSwiftTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
