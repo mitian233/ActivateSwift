@@ -85,6 +85,8 @@ final class AppWindow: NSWindow {
 }
 
 final class AppWindowController: NSWindowController {
+    private var skyLightController: NSWindowController?
+
     init(screen: NSScreen) {
         let appView = AppView()
         let appController = AppController(view: appView)
@@ -92,12 +94,21 @@ final class AppWindowController: NSWindowController {
         super.init(window: AppWindow(screen: screen))
         contentViewController = appController
 
-        SkyLightOperator.shared.delegateView(AnyView(AppViewContainer(appView: AppView())), toScreen: screen)
+        skyLightController = SkyLightOperator.shared.delegateView(
+            AnyView(AppViewContainer(appView: AppView())),
+            toScreen: screen
+        )
     }
 
     @available(*, unavailable)
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+
+    override func close() {
+        skyLightController?.close()
+        skyLightController = nil
+        super.close()
     }
 }
 
